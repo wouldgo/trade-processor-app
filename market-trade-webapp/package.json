@@ -1,0 +1,20 @@
+{
+  "name": "market-trade-webapp",
+  "version": "1.0.0",
+  "author": {
+    "name": "Dario Andrei",
+    "email": "wouldgo84@gmail.com",
+    "url": "https://github.com/wouldgo"
+  },
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "grunt-cli": "*",
+    "grunt": "*",
+    "grunt-contrib-csslint": "*",
+    "grunt-eslint": "*"
+  },
+  "scripts": {
+    "start": "grunt cli"
+  }
+}

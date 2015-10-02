@@ -1,0 +1,42 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.margin-footer {
+  margin-bottom: 100px;
+}
+
+.footer {
+  position: absolute;
+  padding-top: 1%;
+  bottom: 0;
+  width: 100%;
+  background-color: #f8f8f8;
+}
+
+.footer .container-fluid h6 small a {
+  color: #444;
+}
+
+.loading {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9999;
+  display: none;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+}
+
+.black-alpha {
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.64);
+}

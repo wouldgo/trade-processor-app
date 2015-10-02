@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd" >
+<log4j:configuration>
+	
+	<appender name="default.console" class="org.apache.log4j.ConsoleAppender">
+		<param name="target" value="System.out" />
+		<param name="threshold" value="DEBUG" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{ISO8601} %-5p [%c{1}] - %m%n" />
+		</layout>
+	</appender>
+	
+	<appender name="async" class="org.apache.log4j.AsyncAppender">
+		<param name="BufferSize" value="500" />
+		<appender-ref ref="default.console" />
+	</appender>
+	
+	<category name="org.springframework" additivity="false">
+    	<priority value="ERROR" />
+		<appender-ref ref="async" />
+ 	</category>
+ 	
+ 	<category name="org.eclipse.jetty" additivity="false">
+    	<priority value="ERROR" />
+		<appender-ref ref="async" />
+ 	</category>
+ 	
+ 	<logger name="org.hibernate">
+    	<level value="WARN" />
+    	<appender-ref ref="async"/>
+	</logger>
+ 	
+	<logger name="org.wouldgo" additivity="false">
+		<level value="DEBUG" />
+		<appender-ref ref="async" />
+	</logger>
+
+	<root>
+		<priority value="INFO" />
+		<appender-ref ref="async" />
+	</root>
+</log4j:configuration>
